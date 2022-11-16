@@ -1,1 +1,3 @@
-Shift + Alt + F
+- Code Formatting: Shift + Alt + f
+
+- Menu Bar: Shift + Ctrl + p , then type: >toggle menu bar

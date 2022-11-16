@@ -1,0 +1,38 @@
+                                                 nodeJS
+
+
+
+Commands:
+
+-- To open node.js in cmd, type:
+        node
+
+
+
+-- To exit node.js in cmd, press:
+        Ctrl + C
+
+
+
+
+-- To run the node.js file from the CMD: 
+    1- Go to the path of the file you want to run, 
+    2- Then type: 
+        node <fileName>
+
+    Put the name of the file you want to run in place of the word <fileName>
+
+
+
+Hints:
+
+- The main file name in node.js should be: app.js .
+
+- In node js, it is better to use the .forEach() function to pass all the items of the arrays .
+
+- In node js there is no such thing as copy,
+    Meaning that when you copy an object, you are actually sharing the object and not copying it,
+    i.e when you assign a value to an object copied from another object,
+    the same value will be assigned to the other object as well,
+    this happens when doing any assign in node.js, not just for the object,
+    and it's called data sharing .

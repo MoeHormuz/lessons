@@ -219,15 +219,12 @@ There are 6 stages of handling with the MongoDB:
                 });
             -------------------------------------------------------------------------
             Hint: You cannot use redirect with DELETE request,
-                so if you want to redirect use window.location.href inside fetch() function in EJS file
-                as you will see in the second step,
+                so if you want to redirect use window.location.href inside fetch() function in JS file
+                as you will see in the third step,
 
 
 
-        2- In the EJS file, create a button with the data- attribute,
-            and use the fetch() function in JavaScript, For Example:
-
-            The button creation:
+        2- In the EJS file, create a button with the data- attribute, For Example:
             -------------------------------------------------------------------------
                 <button data-linkid="<%= objArticle._id %>" class="create">
                     Delete this article
@@ -235,22 +232,21 @@ There are 6 stages of handling with the MongoDB:
             -------------------------------------------------------------------------
 
 
-            The use of function fetch() in Javascript:
-            -------------------------------------------------------------------------
-                <script>
-                    const btnElement = document.querySelector(".create");
-                    const articleId = btnElement.getAttribute("data-linkId");
 
-                    btnElement.addEventListener("click", (eo) => {
-                        fetch(`/all-articles/${articleId}`, { method: "DELETE" })
-                            .then((response) => response.json())
-                            .then((data) => window.location.href = data.mylink)
-                            .catch((err) => console.log(err));
-                    });
-                </script>
+        3- In the static JavaScript file use the fetch() function, For Example:
+            -------------------------------------------------------------------------
+                const btnElement = document.querySelector(".create");
+                const articleId = btnElement.getAttribute("data-linkId");
+
+                btnElement.addEventListener("click", (eo) => {
+                    fetch(`/all-articles/${articleId}`, { method: "DELETE" })
+                        .then((response) => response.json())
+                        .then((data) => window.location.href = data.mylink)
+                        .catch((err) => console.log(err));
+                });
             -------------------------------------------------------------------------
             Hint: Here used window.location.href to redirect,
-            Hint: You can place fetch() function in the separate JS file,
+            Hint: Don't forget to link the JavaScript file to the EJS file,
 .
 .
 .
